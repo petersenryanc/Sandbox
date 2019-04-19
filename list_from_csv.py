@@ -8,4 +8,7 @@ list_of_places = []
 # print(list_of_places)
 for line in input_file:
     list_of_places.append(line)
-print(list_of_places)
+for i in range(len(list_of_places)):
+    i += 1
+    print("{}: {}".format(i, list_of_places[i-1]))
+input_file.close()
