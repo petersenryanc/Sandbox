@@ -1,6 +1,6 @@
 """
 Birthday Countdown - How many days until your birthday?
-Credit: Talk Python (training.talkpython.com)
+Credit: Talk Python (training.talkpython.fm)
 """
 
 import datetime

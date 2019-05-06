@@ -1,6 +1,6 @@
 """
 Guess the number game. Program tells user if guess is too high or too low.
-Credit: Talk Python (training.talkpython.com)
+Credit: Talk Python (training.talkpython.fm)
 """
 
 import random
