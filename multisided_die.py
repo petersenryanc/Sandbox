@@ -16,7 +16,7 @@ def main():
         n_sides = int(input("Enter number of sides: "))
         while n_sides <= 0:
             print("Number of sides must be greater than zero.")
-            n_sides = input("Enter number of sides: ")
+            n_sides = int(input("Enter number of sides: "))
         die = MSDie(n_sides)
         die.roll()
         print("Die roll results in {}".format(die.get_value()))
