@@ -4,6 +4,7 @@ A simple program for tracking where items are within a household.
 """
 
 from itemcollection import ItemCollection
+from item import Item
 
 
 def main():
@@ -16,7 +17,7 @@ def main():
     [Q]uit
     """
     print(menu)
-    menu_choice = ">>> ".upper()
+    menu_choice = input(">>> ").upper()
     while menu_choice != "Q":
         if menu_choice == "A":
             add_item(list_of_items)
@@ -29,11 +30,32 @@ def main():
         else:
             print("Invalid input; enter bracketed letter only.")
         print(menu)
-        menu_choice = ">>> ".upper()
+        menu_choice = input(">>> ").upper()
 
 
-def add_item():
-    pass
+def list_items(list_of_items):
+    for key, value in list_of_items.items():
+        print("Item: {}, Location: {}".format(key, value))
+
+
+def add_item(list_of_items):
+    item = input("""
+    Enter the item:
+    >>> """)
+    while not item:
+        print("Input cannot be blank")
+        item = input("""
+            Enter the item:
+            >>> """)
+    location = input("""
+    Enter the item's location:
+    >>> """)
+    while not location:
+        print("Input cannot be blank")
+        location = input("""
+            Enter the item's location:
+            >>> """)
+    item_to_add = Item(item, location)
 
 
 def move_item():
